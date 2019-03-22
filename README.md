@@ -45,6 +45,8 @@ public class MainActivity extends BaseActivity{
 5.mvp中的model需要继承BaseModel
 
 ## 计划
-1.准备初始化数据的工作分离出来
+1.加入butterknife注册控件
 
-2.使用更方便只设置相应的参数就可以使用
+2.准备初始化数据的工作分离出来
+
+3.使用更方便只设置相应的参数就可以使用
