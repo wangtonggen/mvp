@@ -5,8 +5,8 @@ Java版mvp模式
 
 2.后续整合成jar包
 
-### 使用
-# 首先添加依赖
+# 使用
+## 首先添加依赖
 
     allprojects {
 		repositories {
@@ -18,7 +18,7 @@ Java版mvp模式
     dependencies {
 	        implementation 'com.github.wangtonggen:mvp:1.0.1'
 	}
-# 具体使用
+## 具体使用
 
 1.初始化建议在application中初始化
 
