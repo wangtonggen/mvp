@@ -1,6 +1,5 @@
 package com.wang.mvp;
 
-import com.wang.mvp.LoginBean;
 import com.wang.mvp.basemvp.BaseObservable;
 import com.wang.mvp.basemvp.BaseService;
 

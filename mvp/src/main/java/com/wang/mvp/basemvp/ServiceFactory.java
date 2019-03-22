@@ -64,15 +64,19 @@ public class ServiceFactory {
      * @return
      */
     private OkHttpClient getOkHttpClient() {
-        if (builder == null) {
-            PersistentCookieJar cookieJar = new PersistentCookieJar(new SetCookieCache(), new SharedPrefsCookiePersistor(BaseApplication.instance));
-            builder = new OkHttpClient.Builder().cookieJar(cookieJar);
-            builder.connectionPool(new ConnectionPool(20, 5, TimeUnit.MINUTES));
-            builder.connectTimeout(DEFAULT_TIME, TimeUnit.SECONDS);
-            builder.writeTimeout(DEFAULT_TIME, TimeUnit.SECONDS);
-            builder.readTimeout(DEFAULT_TIME, TimeUnit.SECONDS);
-
+        if (builder == null){
+            throw new RuntimeException("OkHttpClient.Builder is null");
         }
         return builder.build();
+    }
+
+    /**
+     * 设置okhttp
+     * @param builder
+     */
+    public void setOkhttpClient(OkHttpClient.Builder builder){
+        if (builder == null){
+            this.builder = builder;
+        }
     }
 }
