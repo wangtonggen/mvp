@@ -23,8 +23,10 @@ Java版mvp模式
 1.初始化建议在application中初始化
 
 //设置okhttp
+
 ServiceFactory.getInstance().setOkHttpClient(OkHttpClient.Builder builder);
 //设置域名
+
 ServiceFactory.getInstance().setBaseUrl(String base_url)
 
 2.创建activity 需要继承BaseActivity
@@ -43,4 +45,5 @@ public class MainActivity extends BaseActivity{
 
 ## 计划
 1.准备初始化数据的工作分离出来
+
 2.使用更方便只设置相应的参数就可以使用
