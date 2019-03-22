@@ -13,6 +13,7 @@ public abstract class BaseActivity extends AppCompatActivity implements View.OnC
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(getResLayoutId());
     }
 
     /**
@@ -28,12 +29,12 @@ public abstract class BaseActivity extends AppCompatActivity implements View.OnC
      * 获取资源id
      * @return 布局id
      */
-    abstract int getResLayoutId();
+   public abstract int getResLayoutId();
 
     /**
      * 初始化布局
      */
-    abstract void initView();
+   public abstract void initView();
 
 
 }

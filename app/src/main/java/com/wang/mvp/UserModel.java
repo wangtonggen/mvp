@@ -1,6 +1,7 @@
-package com.wang.mvp.basemvp;
+package com.wang.mvp;
 
-import com.wang.mvp.LoginBean;
+import com.wang.mvp.basemvp.BaseObserver;
+import com.wang.mvp.basemvp.ServiceFactory;
 
 import java.util.Map;
 

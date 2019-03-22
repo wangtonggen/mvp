@@ -3,7 +3,6 @@ package com.wang.mvp;
 import com.wang.mvp.basemvp.BaseObserver;
 import com.wang.mvp.basemvp.HttpResponse;
 import com.wang.mvp.basemvp.IBasePresenter;
-import com.wang.mvp.basemvp.UserModel;
 
 import java.util.HashMap;
 import java.util.Map;

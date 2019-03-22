@@ -1,7 +1,6 @@
 package com.wang.mvp.basemvp;
 
 import io.reactivex.Observer;
-import io.reactivex.disposables.Disposable;
 
 /**
  * author: admin 2019/3/21

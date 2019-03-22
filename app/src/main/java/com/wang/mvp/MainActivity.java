@@ -3,14 +3,19 @@ package com.wang.mvp;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
+import com.wang.mvp.basemvp.BaseActivity;
 import com.wang.mvp.basemvp.HttpResponse;
 
-public class MainActivity extends AppCompatActivity implements LoginView{
+public class MainActivity extends BaseActivity implements LoginView{
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+    public int getResLayoutId() {
+        return R.layout.activity_main;
+    }
+
+    @Override
+    public void initView() {
+
     }
 
     @Override

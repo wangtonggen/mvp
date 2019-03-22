@@ -1,7 +1,8 @@
-package com.wang.mvp.basemvp;
+package com.wang.mvp;
 
-import com.wang.mvp.API;
 import com.wang.mvp.LoginBean;
+import com.wang.mvp.basemvp.BaseObservable;
+import com.wang.mvp.basemvp.BaseService;
 
 import java.util.Map;
 
@@ -16,5 +17,5 @@ import retrofit2.http.POST;
 public interface UserService extends BaseService {
     @FormUrlEncoded
     @POST(API.URL_LOGIN)
-    BaseObservable<LoginBean> login(@FieldMap Map<String,Object> params);
+    BaseObservable<LoginBean> login(@FieldMap Map<String, Object> params);
 }
