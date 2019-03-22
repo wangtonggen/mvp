@@ -2,14 +2,8 @@ package com.wang.mvp.basemvp;
 
 import android.text.TextUtils;
 
-import com.franmontiel.persistentcookiejar.PersistentCookieJar;
-import com.franmontiel.persistentcookiejar.cache.SetCookieCache;
-import com.franmontiel.persistentcookiejar.persistence.SharedPrefsCookiePersistor;
 import com.jakewharton.retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
 
-import java.util.concurrent.TimeUnit;
-
-import okhttp3.ConnectionPool;
 import okhttp3.OkHttpClient;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
@@ -19,7 +13,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
  * desc: service创建
  */
 public class ServiceFactory {
-    public static String BASE_URL = "";//基础url
+    private String base_url = "";//基础url
     private String TAG = getClass().getSimpleName();
     private static ServiceFactory mServiceFactory;
     //默认时间
@@ -50,11 +44,11 @@ public class ServiceFactory {
      * @return
      */
     public <T> T createService(Class<T> service) {
-        if (TextUtils.isEmpty(BASE_URL)){
+        if (TextUtils.isEmpty(base_url)){
             throw new RuntimeException("请先设置BASE_URL");
         }
         if (retrofit == null) {
-            retrofit = new Retrofit.Builder().baseUrl(BASE_URL).client(getOkHttpClient()).addConverterFactory(GsonConverterFactory.create()).addCallAdapterFactory(RxJava2CallAdapterFactory.create()).build();
+            retrofit = new Retrofit.Builder().baseUrl(base_url).client(getOkHttpClient()).addConverterFactory(GsonConverterFactory.create()).addCallAdapterFactory(RxJava2CallAdapterFactory.create()).build();
         }
         return retrofit.create(service);
     }
@@ -74,9 +68,17 @@ public class ServiceFactory {
      * 设置okhttp
      * @param builder
      */
-    public void setOkhttpClient(OkHttpClient.Builder builder){
+    public void setOkHttpClient(OkHttpClient.Builder builder){
         if (builder == null){
             this.builder = builder;
         }
+    }
+
+    /**
+     * 设置baseurl
+     * @param base_url
+     */
+    public void setBaseUrl(String base_url){
+        this.base_url = base_url;
     }
 }
