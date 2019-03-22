@@ -25,6 +25,7 @@ Java版mvp模式
 //设置okhttp
 
 ServiceFactory.getInstance().setOkHttpClient(OkHttpClient.Builder builder);
+
 //设置域名
 
 ServiceFactory.getInstance().setBaseUrl(String base_url)
