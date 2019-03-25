@@ -16,7 +16,7 @@ Java版mvp模式
 	}
 	
     dependencies {
-	        implementation 'com.github.wangtonggen:mvp:1.0.1'
+	        implementation 'com.github.wangtonggen:mvp:1.0.2'
 	}
 ## 具体使用
 
@@ -30,11 +30,15 @@ ServiceFactory.getInstance().setOkHttpClient(OkHttpClient.Builder builder);
 
 ServiceFactory.getInstance().setBaseUrl(String base_url)
 
-2.创建activity 需要继承BaseActivity
+2.创建activity 需要继承BaseActivity fragment(v4)继承BaseFragment
 
 例如：
 
 public class MainActivity extends BaseActivity{
+
+}
+
+public class MyFragment extends BaseFragment {
 
 }
 

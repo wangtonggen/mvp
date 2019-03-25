@@ -16,6 +16,18 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+    //指定jdk版本
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+//    packagingOptions {
+//        exclude 'META-INF/androidx.core_core.version'
+////        exclude 'META-INF/XXX'
+////        exclude 'META-INF/XXX'
+////        exclude 'META-INF/XXX'
+//    }
 }
 
 dependencies {
@@ -25,5 +37,6 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:9.0.0-rc2'
     implementation project(':mvp')
 }

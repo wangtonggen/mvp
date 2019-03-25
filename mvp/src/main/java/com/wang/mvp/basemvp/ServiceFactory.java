@@ -13,8 +13,8 @@ import retrofit2.converter.gson.GsonConverterFactory;
  * desc: service创建
  */
 public class ServiceFactory {
-    private String base_url = "";//基础url
     private String TAG = getClass().getSimpleName();
+    private String base_url = "";//基础url
     private static ServiceFactory mServiceFactory;
     //默认时间
     private static int DEFAULT_TIME = 30;

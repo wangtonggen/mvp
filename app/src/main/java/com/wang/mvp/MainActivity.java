@@ -1,13 +1,15 @@
 package com.wang.mvp;
 
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
+import android.widget.TextView;
 
 import com.wang.mvp.basemvp.BaseActivity;
 import com.wang.mvp.basemvp.HttpResponse;
 
-public class MainActivity extends BaseActivity implements LoginView{
+import butterknife.BindView;
 
+public class MainActivity extends BaseActivity implements LoginView{
+    @BindView(R.id.tv_test)
+    TextView tv_test;
     @Override
     public int getResLayoutId() {
         return R.layout.activity_main;
@@ -15,7 +17,7 @@ public class MainActivity extends BaseActivity implements LoginView{
 
     @Override
     public void initView() {
-
+        tv_test.setText("hello wtg");
     }
 
     @Override
